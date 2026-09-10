@@ -20,7 +20,7 @@ export class Chibi {
   }
 }
 
-class BitchedOutChibi extends Chibi {
+export class BitchedOutChibi extends Chibi {
   constructor() {
     super('Bitched Out Chibi', 'uncommon', 8);
   }
