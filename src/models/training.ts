@@ -1,4 +1,4 @@
-class TrainingSession {
+export class TrainingSession {
   movement: string;
   movementType: string;
   weight: number;

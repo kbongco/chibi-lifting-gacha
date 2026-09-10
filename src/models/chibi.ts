@@ -1,4 +1,6 @@
-class Chibi {
+import type { TrainingSession } from "./training.js";
+
+export class Chibi {
   name: string;
   rarity: string;
   tsunAnnoyance: number;
@@ -12,6 +14,10 @@ class Chibi {
   getTrainingBehavior(): string {
     return "Chibi trains.";
   }
+
+  getActivitationChance(session: TrainingSession):number {
+    return 0
+  }
 }
 
 class BitchedOutChibi extends Chibi {
@@ -24,7 +30,7 @@ class BitchedOutChibi extends Chibi {
   }
 
   canActivate(lift: string, reps: number): boolean {
-  return lift === "squat" && reps > 3;
+  return lift === "squat" && reps >= 3;
 }
 }
 
